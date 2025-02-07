@@ -1,7 +1,7 @@
 # E-Commerce Product Page
 
 ## Project Overview
-In this project, you will build an interactive e-commerce product page using JavaScript. You will learn how to dynamically update the UI based on user actions, such as adding products to the cart, updating quantities, and handling a responsive image gallery.
+Build an interactive e-commerce store over 4 weeks, progressing from basic JavaScript concepts to creating a fully interactive product dashboard. You'll learn fundamental programming concepts while building a practical, real-world application.
 
 ## 🎯 Learning Objectives
 By completing this project, you will:
@@ -24,21 +24,33 @@ By completing this project, you will:
 ## 📅 Project Milestones
 
 ### Milestone 1: HTML & CSS Layout
-- Structure the product page with HTML.
-- Style the layout using CSS to match a real e-commerce product page.
+- Store and manipulate data using variables
+- Work with different data types
+- Use arithmetic and comparison operators
+- Create dynamic string content with template literals
+- Calculate product totals and apply discounts
+
 
 ### Milestone 2: JavaScript for Interactivity
-- Implement functionality to select product quantity.
-- Enable dynamic updates to the shopping cart.
+- Make decisions using conditional statements
+- Create reusable code with functions
+- Validate user input
+- Handle repetitive tasks with loops
+- Calculate dynamic totals and discounts
 
 ### Milestone 3: Advanced Features
-- Add an image gallery with thumbnail previews.
-- Implement cart storage using `localStorage`.
+- Manipulate webpage content dynamically
+- Handle user events (clicks, inputs)
+- Update the UI in response to user actions
+- Add visual feedback with basic animations
+- Create interactive form elements
 
 ### Milestone 4: Bonus Milestone
-- Improve error handling and form validations.
-- Optimize the project for mobile devices.
-- Deploy the project on GitHub Pages.
+- Combine all previous concepts
+- Create a dynamic product management system
+- Enable real-time calculations
+- Implement persistent data storage
+- Build a complete user interface
 
 ## 🌟 Expected Features
 - A product page with images, descriptions, and price.
@@ -59,7 +71,8 @@ By completing this project, you will:
 ## How to Submit Your Work
 1. Fork the repository and clone it to your local machine.
 2. Complete the project and push your changes.
-3. Upload the link to your GitHub Repo in Google Classroom
+3. Ensure you completed at least milestone 1-3 with the expected features.
+4. Upload the link to your GitHub Repo in Google Classroom
 
 
 ## 💬 Questions?

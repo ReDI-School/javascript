@@ -1,8 +1,8 @@
-# **Week 7: Functional Programming**
+# **Week 3: Functional Programming**
 
 ## **Overview**
 
-In Week 7, we’ll begin by introducing **arrays** and **objects**, two fundamental data structures in JavaScript. These concepts are crucial for managing and manipulating collections of data. We will then explore **functional programming** methods like `map`, `filter`, and `reduce` to write clean, efficient code.
+In Week 3, we’ll begin by introducing **arrays** and **objects**, two fundamental data structures in JavaScript. These concepts are crucial for managing and manipulating collections of data. We will then explore **functional programming** methods like `map`, `filter`, and `reduce` to write clean, efficient code.
 
 This week’s project enhances the Pokémon Showcase by enabling advanced functionality such as filtering and sorting Pokémon data using these newly introduced concepts.
 

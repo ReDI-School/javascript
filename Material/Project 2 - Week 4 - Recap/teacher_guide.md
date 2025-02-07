@@ -1,4 +1,4 @@
-# **Teacher Guide – Week 8: Case Studies Hub**
+# **Teacher Guide – Project 2 - Week 4: Case Studies Hub**
 
 ## **Introduction**
 

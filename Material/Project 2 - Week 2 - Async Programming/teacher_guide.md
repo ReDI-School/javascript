@@ -1,5 +1,5 @@
 
-# **Teacher Guide – Week 6: Async Programming**
+# **Teacher Guide – Project 2 - Week 2: Async Programming**
 
 ## **Introduction**
 This guide helps instructors teach students the fundamentals of **asynchronous programming** using `fetch`, `Promises`, and `async/await`. Students will use the PokéAPI to dynamically fetch and display Pokémon data in their portfolio. This milestone introduces real-world API integration while reinforcing DOM manipulation skills.

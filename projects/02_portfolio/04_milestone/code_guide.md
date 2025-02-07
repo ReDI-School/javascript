@@ -1,5 +1,5 @@
 
-# **Week 8: Case Studies Hub – Code Guide**
+# **Week 4: Case Studies Hub – Code Guide**
 
 ## **Introduction**
 This project consolidates all the concepts learned in previous weeks by building a **Case Studies Hub**. This guide explains how the project integrates HTML, CSS, and JavaScript to create an interactive portfolio-like dashboard. Students learned how to dynamically display, filter, sort, and manage data using the PokéAPI.

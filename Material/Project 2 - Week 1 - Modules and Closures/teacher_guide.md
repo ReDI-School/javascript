@@ -1,5 +1,5 @@
 
-# **Teacher Guide – Week 5: Modules and Closures**
+# **Teacher Guide – Project 2 - Week 1: Modules and Closures**
 
 ## **Introduction**
 This guide helps instructors teach students how to structure their JavaScript code using **modules** and **closures**. These advanced concepts introduce organization, encapsulation, and secure data handling in JavaScript. Students will use these techniques to build a modular personal portfolio.

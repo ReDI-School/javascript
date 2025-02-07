@@ -1,4 +1,4 @@
-# **Week 8: Case Studies Hub**
+# **Week 4: Case Studies Hub**
 
 ## **Overview**
 

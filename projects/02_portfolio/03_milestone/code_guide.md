@@ -1,5 +1,5 @@
 
-# **Week 7: Functional Programming with Arrays and Objects – Code Guide**
+# **Week 3: Functional Programming with Arrays and Objects – Code Guide**
 
 ## **Introduction**
 This project demonstrates the use of **arrays** and **objects** in JavaScript and introduces functional programming methods (`map`, `filter`, `reduce`) to enhance the Pokémon Showcase. You learned how to manage data using these structures and added filtering and sorting functionality.

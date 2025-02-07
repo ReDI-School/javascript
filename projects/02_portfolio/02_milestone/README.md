@@ -1,8 +1,8 @@
 
-# **Week 6: Async Programming**
+# **Week 2: Async Programming**
 
 ## **Overview**
-In Week 6, you’ll learn about **asynchronous programming** in JavaScript by using the PokéAPI to dynamically fetch and display Pokémon in your portfolio. This project integrates `fetch`, `async/await`, and real-time data updates to create an interactive Pokémon showcase.
+In Week 2, you’ll learn about **asynchronous programming** in JavaScript by using the PokéAPI to dynamically fetch and display Pokémon in your portfolio. This project integrates `fetch`, `async/await`, and real-time data updates to create an interactive Pokémon showcase.
 
 ---
 

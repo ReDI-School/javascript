@@ -1,4 +1,4 @@
-# **Teacher Guide – Week 7: Functional Programming with Arrays and Objects**
+# **Teacher Guide – Project 2 - Week 3: Functional Programming with Arrays and Objects**
 
 ## **Introduction**
 

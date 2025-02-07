@@ -1,5 +1,5 @@
 
-# **Week 6: Async Programming – Code Guide**
+# **Week 2: Async Programming – Code Guide**
 
 ## **Introduction**
 In this project, you integrated **asynchronous programming** concepts into your portfolio by using the **PokéAPI** to fetch and display Pokémon data dynamically. This guide explains how the project leverages `fetch`, `async/await`, and DOM manipulation to create an interactive Pokémon showcase.

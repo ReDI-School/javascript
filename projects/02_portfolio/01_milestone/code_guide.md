@@ -1,5 +1,5 @@
 
-# **Week 5: Modules and Closures – Code Guide**
+# **Week 1: Modules and Closures – Code Guide**
 
 ## **Introduction**
 This project demonstrates how to use **modules** and **closures** to organize and secure your JavaScript code. By building a modular personal portfolio, you learned to separate functionality into distinct parts, encapsulate data with closures, and dynamically update content using JavaScript.

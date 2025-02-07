@@ -1,8 +1,8 @@
 
-# **Week 5: Modules and Closures**
+# **Week 1: Modules and Closures**
 
 ## **Overview**
-In Week 5, we will take a significant step toward writing more organized and reusable JavaScript code by exploring **modules** and **closures**. These concepts allow you to structure your code efficiently, reduce redundancy, and protect variables from unwanted access or modification.
+In Week 1, we will take a significant step toward writing more organized and reusable JavaScript code by exploring **modules** and **closures**. These concepts allow you to structure your code efficiently, reduce redundancy, and protect variables from unwanted access or modification.
 
 This week’s project builds a **modular personal portfolio**, where each section of the page (e.g., About Me, Projects, Contact) is managed separately. By using modules and closures, we’ll make the code cleaner, reusable, and easier to maintain.
 
