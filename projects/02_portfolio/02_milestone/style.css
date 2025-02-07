@@ -1,0 +1,105 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    background-color: #ffcb05;
+    color: #2a75bb;
+    padding: 20px 0;
+    border-bottom: 5px solid #2a75bb;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls input, .controls button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background: #2a75bb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #184785;
+}
+
+/* Pokemon Card */
+.card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #2a75bb;
+}
+
+.highlight {
+    animation: highlight-animation 1s ease;
+}
+
+@keyframes highlight-animation {
+    0% {
+        transform: scale(1);
+        background-color: #fff;
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: #ffcb05;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #fff;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #2a75bb;
+    color: white;
+    margin-top: 20px;
+}

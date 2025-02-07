@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store - Week 3</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My E-Commerce Store</h1>
+    </header>
+    <main>
+        <ul id="product-list">
+            <li>
+                Product 1: $10
+                <input type="number" id="quantity1" min="0" value="0">
+            </li>
+            <li>
+                Product 2: $20
+                <input type="number" id="quantity2" min="0" value="0">
+            </li>
+            <li>
+                Product 3: $15
+                <input type="number" id="quantity3" min="0" value="0">
+            </li>
+        </ul>
+        <section id="summary">
+            <h2>Order Summary</h2>
+            <p id="total-display">Total: $0.00</p>
+            <p id="discount-display">Discount: $0.00</p>
+            <p id="final-total-display">Final Total: $0.00</p>
+            <button id="reset">Reset Quantities</button>
+            <button id="animate">Highlight Total</button>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us: info@myecommercestore.com</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

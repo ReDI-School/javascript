@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>My E-Commerce Store</h1>
+      <nav>
+        <button id="view-cart">View Cart</button>
+        <input type="text" id="search-bar" placeholder="Search products..." />
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Product Filters -->
+      <section id="filters">
+        <h2>Filter Products</h2>
+        <select id="category-filter">
+          <option value="">All Categories</option>
+          <option value="beauty">Beauty</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing">Clothing</option>
+        </select>
+        <select id="sort-filter">
+          <option value="">Sort By</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating-desc">Rating: High to Low</option>
+        </select>
+      </section>
+
+      <!-- Product Listing -->
+      <section id="product-list">
+        <h2>Products</h2>
+        <div id="products" class="product-grid"></div>
+      </section>
+    </main>
+
+    <!-- Cart Popup -->
+    <div id="cart-popup" class="hidden">
+      <div class="cart-container">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+          <p>Total: <span id="cart-total">$0.00</span></p>
+          <button id="checkout">Checkout</button>
+          <button id="close-cart">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 My E-Commerce Store. Powered by DummyJSON API.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

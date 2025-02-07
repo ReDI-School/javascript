@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Dashboard - Recap</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Interactive E-Commerce Dashboard</h1>
+    </header>
+    <main>
+      <section id="product-section">
+        <h2>Products</h2>
+        <ul id="product-list"></ul>
+      </section>
+      <section id="controls">
+        <h2>Add a Product</h2>
+        <input type="text" id="product-name" placeholder="Product Name" />
+        <input type="number" id="product-price" placeholder="Price" min="0" />
+        <input
+          type="number"
+          id="product-quantity"
+          placeholder="Quantity"
+          min="0"
+        />
+        <button id="add-product">Add Product</button>
+        <button id="reset-dashboard">Reset Dashboard</button>
+      </section>
+      <section id="summary">
+        <h2>Order Summary</h2>
+        <p id="total-display">Total: $0.00</p>
+        <p id="discount-display">Discount: $0.00</p>
+        <p id="final-total-display">Final Total: $0.00</p>
+      </section>
+    </main>
+    <footer>
+      <p>Contact us: support@ecommercedashboard.com</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
