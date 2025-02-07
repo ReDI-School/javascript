@@ -1,47 +1,75 @@
 
-# **Week 6: Async Programming – Code Guide**
+# **Week 6: Async Programming**
 
-## **Introduction**
-In this project, you integrated **asynchronous programming** concepts into your portfolio by using the **PokéAPI** to fetch and display Pokémon data dynamically. This guide explains how the project leverages `fetch`, `async/await`, and DOM manipulation to create an interactive Pokémon showcase.
-
----
-
-## **What’s Happening in index.html?**
-The `index.html` file structures the page and provides placeholders for dynamic content.
-
-1. **Pokemon Display Section**:
-   - Includes an empty `<div>` for displaying fetched Pokémon details dynamically.
-   - Example:
-     ```html
-     <div id="pokemon-display" class="card"></div>
-     ```
-
-2. **Controls Section**:
-   - Contains input and buttons for fetching Pokémon data.
-   - Example:
-     ```html
-     <div id="controls" class="controls">
-         <input type="text" id="pokemon-name" placeholder="Enter Pokémon name">
-         <button id="fetch-pokemon">Fetch Pokémon</button>
-         <button id="fetch-random">Fetch Random Pokémon</button>
-     </div>
-     ```
+## **Overview**
+In Week 6, you’ll learn about **asynchronous programming** in JavaScript by using the PokéAPI to dynamically fetch and display Pokémon in your portfolio. This project integrates `fetch`, `async/await`, and real-time data updates to create an interactive Pokémon showcase.
 
 ---
 
-## **What’s Happening in script.js?**
-The `script.js` file handles fetching data from the PokéAPI and updating the DOM.
+## **Learning Objectives**
+1. **Understand Asynchronous Programming**:
+   - Learn how JavaScript handles asynchronous tasks with `fetch`, `Promises`, and `async/await`.
+   - Explore the importance of handling responses and errors.
 
-### **1. Fetching Pokémon Data**
-A function retrieves Pokémon details by name or ID using `fetch`. The response is parsed as JSON.
+2. **Use APIs**:
+   - Make HTTP requests to fetch data from external APIs (e.g., PokéAPI).
+   - Parse and display JSON data dynamically.
 
-**Code Example**:
+3. **Apply Concepts to the Project**:
+   - Dynamically load Pokémon details into the portfolio’s "Projects" section.
+   - Handle user input and update the page in real-time.
+
+---
+
+## **Why Learn These Concepts?**
+APIs are a fundamental part of modern web development, enabling your applications to interact with external services. Think of APIs as bridges connecting your application to vast resources of data, like Pokémon in this project!
+
+---
+
+## **Project Requirements**
+1. **HTML Setup**:
+   - Update the "Projects" section to display Pokémon details.
+   - Add buttons for fetching Pokémon data dynamically.
+
+2. **JavaScript Features**:
+   - Use `fetch` to retrieve Pokémon details from the PokéAPI.
+   - Handle errors gracefully (e.g., invalid Pokémon names).
+
+3. **Dynamic Updates**:
+   - Allow users to search for a specific Pokémon or load a random one.
+
+---
+
+## **Steps to Complete**
+
+### **1. Update the HTML**
+- Modify the "Projects" section to display Pokémon details dynamically.
+
+**Example Code**:
+```html
+<section id="projects">
+    <h2>Pokemon Showcase</h2>
+    <div id="pokemon-display"></div>
+    <div id="controls">
+        <input type="text" id="pokemon-name" placeholder="Enter Pokémon name">
+        <button id="fetch-pokemon">Fetch Pokémon</button>
+        <button id="fetch-random">Fetch Random Pokémon</button>
+    </div>
+</section>
+```
+
+---
+
+### **2. Use Fetch to Retrieve Data**
+- Write a function to fetch Pokémon details by name.
+
+**Example Code**:
 ```javascript
-async function fetchPokemon(nameOrId) {
+async function fetchPokemon(name) {
     try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nameOrId}`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
         if (!response.ok) {
-            throw new Error("Pokémon not found!");
+            throw new Error("Pokémon not found");
         }
         const data = await response.json();
         displayPokemon(data);
@@ -51,39 +79,43 @@ async function fetchPokemon(nameOrId) {
 }
 ```
 
-### **2. Displaying Pokémon Data**
-The `displayPokemon` function updates the DOM to show fetched Pokémon details.
+---
 
-**Code Example**:
+### **3. Display Pokémon Data**
+- Dynamically update the DOM to show Pokémon details.
+
+**Example Code**:
 ```javascript
 function displayPokemon(data) {
     const display = document.getElementById("pokemon-display");
     display.innerHTML = `
         <h3>${data.name.toUpperCase()}</h3>
         <img src="${data.sprites.front_default}" alt="${data.name}">
-        <p><strong>Base Experience:</strong> ${data.base_experience}</p>
-        <p><strong>Abilities:</strong> ${data.abilities.map(a => a.ability.name).join(", ")}</p>
+        <p>Base Experience: ${data.base_experience}</p>
+        <p>Abilities: ${data.abilities.map(a => a.ability.name).join(", ")}</p>
     `;
-    display.classList.add("highlight");
-    setTimeout(() => display.classList.remove("highlight"), 1000);
 }
 ```
 
-### **3. Fetching Random Pokémon**
-A function generates a random Pokémon ID (1–898) and fetches data for that Pokémon.
+---
 
-**Code Example**:
+### **4. Add Random Pokémon Functionality**
+- Fetch a random Pokémon using its ID.
+
+**Example Code**:
 ```javascript
 async function fetchRandomPokemon() {
-    const randomId = Math.floor(Math.random() * 898) + 1;
+    const randomId = Math.floor(Math.random() * 898) + 1; // Pokémon IDs range from 1 to 898
     await fetchPokemon(randomId);
 }
 ```
 
-### **4. Adding Event Listeners**
-Buttons are linked to their respective functions for fetching data.
+---
 
-**Code Example**:
+### **5. Link Buttons to Functions**
+- Add event listeners to the buttons for fetching data.
+
+**Example Code**:
 ```javascript
 document.getElementById("fetch-pokemon").addEventListener("click", () => {
     const name = document.getElementById("pokemon-name").value.trim().toLowerCase();
@@ -95,69 +127,22 @@ document.getElementById("fetch-random").addEventListener("click", fetchRandomPok
 
 ---
 
-## **What’s Happening in style.css?**
-The `style.css` file enhances the visual design with vibrant and engaging styles.
-
-1. **General Layout**:
-   - Creates a clean and centered layout.
-   - Example:
-     ```css
-     body {
-         font-family: Arial, sans-serif;
-         background-color: #f4f4f9;
-         color: #333;
-         text-align: center;
-     }
-     ```
-
-2. **Pokemon Card**:
-   - Highlights the Pokémon display with a card-like design.
-   - Example:
-     ```css
-     .card {
-         background: #f9f9f9;
-         padding: 20px;
-         border-radius: 10px;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-         text-align: center;
-     }
-     ```
-
-3. **Highlight Animation**:
-   - Adds a smooth animation when a Pokémon is displayed.
-   - Example:
-     ```css
-     .highlight {
-         animation: highlight-animation 1s ease;
-     }
-
-     @keyframes highlight-animation {
-         0% {
-             transform: scale(1);
-             background-color: #fff;
-         }
-         50% {
-             transform: scale(1.05);
-             background-color: #ffcb05;
-         }
-         100% {
-             transform: scale(1);
-             background-color: #fff;
-         }
-     }
-     ```
+## **Expected Output**
+1. Users can search for Pokémon by name or fetch a random one.
+2. Pokémon details, including name, abilities, and an image, are displayed dynamically.
+3. Errors (e.g., invalid names) are handled gracefully with alert messages.
 
 ---
 
-## **Summary**
-1. **index.html**:
-   - Provides the structure for the Pokémon showcase, including input and buttons for user interaction.
+## **Bonus Challenge**
+1. Add a "Favorites" feature to save and display selected Pokémon.
+2. Include additional Pokémon data, like types and stats.
 
-2. **script.js**:
-   - Implements asynchronous functions to fetch data from the PokéAPI.
-   - Updates the DOM dynamically with fetched Pokémon details.
+---
 
-3. **style.css**:
-   - Enhances the user experience with clean layouts, vibrant colors, and animations.
+## **Resources**
+1. **Async Programming**: [MDN Web Docs - async/await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+2. **APIs**: [PokéAPI Documentation](https://pokeapi.co/)
+3. **Error Handling**: [JavaScript.info - Error Handling](https://javascript.info/try-catch)
 
 ---

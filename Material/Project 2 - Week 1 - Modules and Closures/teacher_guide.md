@@ -132,7 +132,7 @@ document.getElementById("add-project").addEventListener("click", () => {
 ---
 
 ## **Expected Outcomes**
-By the end of this lesson, students should:
+By the end of this milestone, students should:
 1. Organize their code into modules using `export` and `import`.
 2. Use closures to encapsulate and protect data.
 3. Build a modular personal portfolio with interactive features.

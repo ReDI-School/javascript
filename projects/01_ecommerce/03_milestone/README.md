@@ -1,88 +1,83 @@
 
-# **Week 3: DOM Basics – Code Guide**
+# **Week 3: DOM Basics**
 
-## **Introduction**
-In this project, you enhanced your e-commerce store by learning how to manipulate the **Document Object Model (DOM)**. Using JavaScript, you dynamically updated the content, handled user interactions, and applied animations to create a more engaging user experience.
+## **Overview**
+In Week 3, you will learn how to interact with the **Document Object Model (DOM)** to enhance the functionality of your e-commerce store. The DOM is a programming interface that allows you to manipulate HTML and CSS dynamically, enabling you to create engaging and interactive web applications.
 
-This guide explains the key aspects of the code in `index.html` and `script.js`.
-
----
-
-## **What’s Happening in index.html?**
-The `index.html` file now includes placeholders for dynamic content and additional buttons for interactivity.
-
-1. **Adding a Summary Section**:
-   - A `<section>` element was added to display the order summary, including totals, discounts, and the final total.
-   - Example:
-     ```html
-     <section id="summary">
-         <h2>Order Summary</h2>
-         <p id="total-display">Total: $0.00</p>
-         <p id="discount-display">Discount: $0.00</p>
-         <p id="final-total-display">Final Total: $0.00</p>
-     </section>
-     ```
-
-2. **Adding Buttons**:
-   - Buttons for resetting quantities and highlighting totals were included.
-   - Example:
-     ```html
-     <button id="reset">Reset Quantities</button>
-     <button id="animate">Highlight Total</button>
-     ```
-
-3. **Connecting JavaScript**:
-   - The `<script>` tag links the `script.js` file, which implements the dynamic logic.
-   - Example:
-     ```html
-     <script src="script.js"></script>
-     ```
+You will use DOM manipulation to dynamically update content, handle user events, and introduce animations for better user experience.
 
 ---
 
-## **What’s Happening in script.js?**
-The `script.js` file implements the core logic for DOM manipulation, event handling, and animations.
+## **Learning Objectives**
+1. **Understand the DOM**:
+   - Learn the structure of the DOM and how it represents HTML as a tree-like structure.
+   - Access and modify elements using JavaScript.
 
-### **1. Validating Input**
-A function ensures that user inputs are valid (non-negative numbers).
+2. **Manipulate DOM Elements**:
+   - Add, remove, and update elements dynamically.
+   - Use `querySelector` and `getElementById` to target specific elements.
 
-**Code Example**:
-```javascript
-function validateQuantity(quantity) {
-    return quantity >= 0;
-}
+3. **Handle Events**:
+   - Learn to respond to user actions using event listeners (e.g., clicks, inputs).
+   - Understand how to pass data through events.
+
+4. **Introduce Animations**:
+   - Apply basic animations using CSS classes and JavaScript.
+
+---
+
+## **Why Learn These Concepts?**
+The DOM is the bridge between your HTML structure and JavaScript logic. Imagine it as a "remote control" that lets you interact with and modify the webpage on the fly. Whether you’re updating content, responding to user clicks, or animating elements, mastering the DOM is key to building dynamic web applications.
+
+---
+
+## **Project Requirements**
+1. **HTML Enhancements**:
+   - Add placeholders for dynamic content, such as a summary section to display user totals and discounts.
+   - Include buttons for features like resetting quantities or applying animations.
+
+2. **JavaScript Features**:
+   - Use the DOM to update the webpage dynamically based on user actions.
+   - Add event listeners to handle button clicks and input changes.
+   - Implement basic animations to enhance visual feedback.
+
+---
+
+## **Steps to Complete**
+
+### **1. Update the HTML**
+- Add a `<section>` for the summary output and buttons for additional actions.
+
+**Example Code**:
+```html
+<section id="summary">
+    <h2>Order Summary</h2>
+    <p id="total-display">Total: $0.00</p>
+    <p id="discount-display">Discount: $0.00</p>
+    <p id="final-total-display">Final Total: $0.00</p>
+    <button id="reset">Reset Quantities</button>
+    <button id="animate">Highlight Total</button>
+</section>
 ```
 
-### **2. Calculating Totals**
-A reusable function iterates through product prices and user-provided quantities to calculate the total cost.
+---
 
-**Code Example**:
+### **2. Access and Manipulate the DOM**
+- Use `querySelector` or `getElementById` to select elements dynamically.
+- Update the content of elements based on user interactions.
+
+**Example Code**:
 ```javascript
-function calculateTotal(prices, quantities) {
-    let total = 0;
-    for (let i = 0; i < prices.length; i++) {
-        if (validateQuantity(quantities[i])) {
-            total += prices[i] * quantities[i];
-        }
-    }
-    return total;
-}
+document.getElementById("total-display").textContent = `Total: $${total.toFixed(2)}`;
 ```
 
-### **3. Applying Discounts**
-If the total exceeds $50, a 10% discount is applied. This logic is encapsulated in a reusable function.
+---
 
-**Code Example**:
-```javascript
-function applyDiscount(total) {
-    return total > 50 ? total * 0.9 : total;
-}
-```
+### **3. Add Event Listeners**
+- Handle events like button clicks or input changes.
+- Reset quantities or apply visual highlights dynamically.
 
-### **4. Resetting Quantities**
-A button resets all input fields and clears the summary.
-
-**Code Example**:
+**Example Code**:
 ```javascript
 document.getElementById("reset").addEventListener("click", () => {
     document.querySelectorAll("input[type='number']").forEach(input => {
@@ -94,10 +89,13 @@ document.getElementById("reset").addEventListener("click", () => {
 });
 ```
 
-### **5. Highlighting Totals**
-A button toggles a highlight animation on the total display.
+---
 
-**Code Example**:
+### **4. Add Basic Animations**
+- Use JavaScript to toggle CSS classes for animations.
+- Highlight elements like the total display when it’s updated.
+
+**Example Code**:
 ```javascript
 document.getElementById("animate").addEventListener("click", () => {
     const totalDisplay = document.getElementById("total-display");
@@ -106,38 +104,25 @@ document.getElementById("animate").addEventListener("click", () => {
 });
 ```
 
-### **6. Dynamic Updates**
-The webpage dynamically updates totals, discounts, and final totals based on user input.
+---
 
-**Code Example**:
-```javascript
-document.querySelectorAll("input[type='number']").forEach((input, index) => {
-    input.addEventListener("input", () => {
-        const prices = [10, 20, 15];
-        const quantities = [
-            parseInt(document.getElementById("quantity1").value) || 0,
-            parseInt(document.getElementById("quantity2").value) || 0,
-            parseInt(document.getElementById("quantity3").value) || 0
-        ];
-        const total = calculateTotal(prices, quantities);
-        const finalTotal = applyDiscount(total);
-
-        document.getElementById("total-display").textContent = `Total: $${total.toFixed(2)}`;
-        document.getElementById("discount-display").textContent = `Discount: $${(total - finalTotal).toFixed(2)}`;
-        document.getElementById("final-total-display").textContent = `Final Total: $${finalTotal.toFixed(2)}`;
-    });
-});
-```
+## **Expected Output**
+1. Totals and discounts are updated dynamically based on user input.
+2. Buttons allow users to reset quantities or highlight totals visually.
+3. Animations provide feedback, enhancing the user experience.
 
 ---
 
-## **Summary**
-1. **index.html**:
-   - Includes a summary section to display totals dynamically.
-   - Adds buttons for resetting quantities and highlighting totals.
+## **Bonus Challenge**
+1. Allow users to toggle between different discount rates (e.g., 10%, 20%, 30%).
+2. Create a smooth transition effect for adding and removing elements dynamically.
 
-2. **script.js**:
-   - Implements input validation, dynamic updates, and animations.
-   - Uses event listeners to handle user interactions.
+---
+
+## **Resources**
+- **Code Guide**: Review the code_guide.md file in this folder for more help & explanations on the code! 
+- **DOM Basics**: [MDN Web Docs - Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+- **Event Handling**: [JavaScript.info - Events](https://javascript.info/events)
+- **Animations**: [MDN Web Docs - Using CSS animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 
 ---

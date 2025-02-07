@@ -129,7 +129,7 @@ function validateQuantity(quantity) {
 ---
 
 ## **Expected Outcomes**
-By the end of this lesson, students should:
+By the end of this milestone, students should:
 1. Use conditional statements to control program flow.
 2. Iterate over arrays and objects using loops.
 3. Define and call functions to organize their code.

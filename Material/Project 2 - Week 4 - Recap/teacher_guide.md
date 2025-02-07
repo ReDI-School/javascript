@@ -157,7 +157,7 @@ function addToFavorites(caseStudy) {
 
 ## **Expected Outcomes**
 
-By the end of this lesson, students should:
+By the end of this milestone, students should:
 
 1. Understand how to integrate HTML, CSS, and JavaScript to build a cohesive project.
 2. Demonstrate mastery of arrays, objects, and functional programming methods.

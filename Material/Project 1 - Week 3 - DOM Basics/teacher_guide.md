@@ -111,7 +111,7 @@ Explain that animations should enhance, not distract, user experience.
 ---
 
 ## **Expected Outcomes**
-By the end of this lesson, students should:
+By the end of this milestone, students should:
 1. Understand the DOM structure and how it relates to HTML.
 2. Select and manipulate elements dynamically using JavaScript.
 3. Attach event listeners to handle user interactions.

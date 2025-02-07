@@ -136,7 +136,7 @@ console.log(`Grand Total: $${grandTotal}`);
 ---
 
 ## **Expected Outcomes**
-By the end of this lesson, students should:
+By the end of this milestone, students should:
 1. Understand how to declare and use variables effectively.
 2. Perform calculations and manipulate data using operators.
 3. Dynamically combine data into outputs using template literals.

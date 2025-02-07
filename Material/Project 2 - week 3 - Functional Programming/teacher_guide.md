@@ -2,7 +2,7 @@
 
 ## **Introduction**
 
-This guide helps instructors introduce students to **arrays** and **objects**, two foundational data structures in JavaScript. Students will also learn functional programming techniques using methods like `map`, `filter`, and `reduce`. By the end of this lesson, students will enhance their Pokémon Showcase with filtering and sorting functionality.
+This guide helps instructors introduce students to **arrays** and **objects**, two foundational data structures in JavaScript. Students will also learn functional programming techniques using methods like `map`, `filter`, and `reduce`. By the end of this milestone, students will enhance their Pokémon Showcase with filtering and sorting functionality.
 
 ---
 
@@ -195,7 +195,7 @@ console.log(totalExp); // Outputs: 322
 
 ## **Expected Outcomes**
 
-By the end of this lesson, students should:
+By the end of this milestone, students should:
 
 1. Understand how to use arrays and objects to store and organize data.
 2. Apply functional programming methods to manipulate data.

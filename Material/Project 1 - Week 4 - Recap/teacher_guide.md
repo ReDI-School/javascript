@@ -123,7 +123,7 @@ if (name === "" || price <= 0 || quantity <= 0) {
 ---
 
 ## **Expected Outcomes**
-By the end of this lesson, students should:
+By the end of this milestone, students should:
 1. Combine variables, control flow, functions, and DOM manipulation to create a cohesive project.
 2. Dynamically add, remove, and update DOM elements in response to user interactions.
 3. Build a fully functional and interactive e-commerce dashboard.
