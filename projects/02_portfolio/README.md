@@ -3,7 +3,7 @@
 ## Project Overview
 Build a modular portfolio website showcasing your projects through an interactive Pokémon-themed interface. This project progressively introduces advanced JavaScript concepts while creating a functional, dynamic web application.
 
-## Learning Objectives
+## 🎯 Learning Objectives
 By completing this project, you will:
 - Gain experience working with JavaScript variables and operators.
 - Understand how to manipulate the DOM to create interactive components.
@@ -20,7 +20,7 @@ By completing this project, you will:
    ```
 3. Open `index.html` in your browser or use Live Server in VS Code.
 
-## Project Milestones
+## 📅 Project Milestones
 ### Week 1: JavaScript Modules & Closures
 - Implement closures for private variables and encapsulation
 - Create basic portfolio sections (About Me, Projects, Contact)
@@ -45,7 +45,7 @@ By completing this project, you will:
 - Implement favorites system
 - Add responsive design and local storage
 
-## Expected Features
+## 🌟 Expected Features
 - A portfolio homepage with an introduction, projects, and a contact section.
 - Interactive elements like a navigation menu and a project showcase.
 - A functional contact form with validation.
